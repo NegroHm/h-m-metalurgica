@@ -12,7 +12,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   const generateWhatsAppLink = (productName: string) => {
     const phoneNumber = "15551234567"; // Placeholder phone number
-    const message = `Hello, I'm interested in the product: ${productName}`;
+    const message = `Hola, estoy interesado/a en el producto: ${productName}`;
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   };
 
@@ -37,7 +37,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
               variant="secondary"
               className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
-              View Details
+              Ver Detalles
             </Button>
           </div>
         </div>
@@ -46,7 +46,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             {product.name}
           </h4>
           <p className="text-xl font-bold text-primary">
-            {formatPrice(product.price)}
+            Consultar Precio
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                   {product.name}
                 </DialogTitle>
                 <p className="text-3xl font-bold text-primary mb-6">
-                  {formatPrice(product.price)}
+                  Consultar Precio
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {product.description}
@@ -86,7 +86,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 className="w-full"
               >
                 <Button className="w-full" size="lg">
-                  Inquire on WhatsApp
+                  Consultar en WhatsApp
                 </Button>
               </a>
             </div>

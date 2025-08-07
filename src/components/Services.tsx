@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 const Services = () => {
   const handleQuoteRequest = () => {
     const email = "your-email@example.com"; // Easily editable placeholder
-    const subject = "Request for Custom Quote";
-    const body = `Hello Héctor Medina Team,
+    const subject = "Solicitud de Cotización Personalizada";
+    const body = `Hola equipo de Héctor Medina,
 
-I would like to request a quote for the following project:
+Quisiera solicitar una cotización para el siguiente proyecto:
 
-[Please describe your project or needs here]
+[Por favor, describa su proyecto o necesidad aquí]
 
-Thank you.`;
+Gracias.`;
     
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
@@ -22,7 +22,7 @@ Thank you.`;
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Professional Metallurgical Services
+            Servicios de Herrería Profesional
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
@@ -43,17 +43,17 @@ Thank you.`;
           {/* Right Column - Content */}
           <div className="order-1 lg:order-2">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-              From Custom Designs to Expert Repairs
+              Desde Diseños Personalizados Hasta Reparaciones Expertas
             </h3>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We offer a full range of metallurgical services, including custom design and fabrication, 
-              high-precision TIG and MIG welding, structural repairs, and professional installations. 
-              We work with steel, iron, and other metals to bring your vision to life.
+              Ofrecemos una gama completa de servicios de herrería, incluyendo diseño y fabricación personalizada, 
+              soldadura TIG y MIG de alta precisión, reparaciones estructurales e instalaciones profesionales. 
+              Trabajamos con acero, hierro y otros metales para dar vida a su visión.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Our master craftsmen combine traditional techniques with modern equipment to deliver 
-              exceptional results. Whether you need a custom gate, structural repairs, or a unique 
-              piece of metalwork, we have the expertise to exceed your expectations.
+              Nuestros maestros artesanos combinan técnicas tradicionales con equipos modernos para entregar 
+              resultados excepcionales. Ya sea que necesite un portón personalizado, reparaciones estructurales 
+              o una pieza única de herrería, tenemos la experiencia para superar sus expectativas.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ Thank you.`;
             onClick={handleQuoteRequest}
             className="px-8 py-4 text-lg font-semibold"
           >
-            Request a Custom Quote
+            Solicita una Cotización
           </Button>
         </div>
       </div>

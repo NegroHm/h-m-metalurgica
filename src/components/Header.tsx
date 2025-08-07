@@ -41,22 +41,28 @@ const Header = () => {
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button 
+              onClick={() => scrollToSection('home')}
+              className="text-foreground hover:text-muted-foreground transition-smooth font-medium"
+            >
+              Inicio
+            </button>
+            <button 
               onClick={() => scrollToSection('products')}
               className="text-foreground hover:text-muted-foreground transition-smooth font-medium"
             >
-              Products
+              Productos
+            </button>
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="text-foreground hover:text-muted-foreground transition-smooth font-medium"
+            >
+              Servicios
             </button>
             <button 
               onClick={() => scrollToSection('about')}
               className="text-foreground hover:text-muted-foreground transition-smooth font-medium"
             >
-              About Us
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-muted-foreground transition-smooth font-medium"
-            >
-              Contact
+              Nosotros
             </button>
           </nav>
 

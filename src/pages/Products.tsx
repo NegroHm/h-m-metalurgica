@@ -9,13 +9,14 @@ const Products = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const { products, loading, error } = useProducts(activeFilter);
 
-  const categories = ['All', 'Grills', 'Gates', 'Railings', 'Furniture', 'Other'];
+  const categories = ['Todos', 'Parrillas', 'Portones', 'Rejas', 'Muebles', 'Otros'];
 
   const handleFilterClick = (category: string) => {
-    setActiveFilter(category === 'Grills' ? 'Grill' : 
-                   category === 'Gates' ? 'Gate' : 
-                   category === 'Railings' ? 'Railing' : 
-                   category);
+    setActiveFilter(category === 'Parrillas' ? 'Grill' : 
+                   category === 'Portones' ? 'Gate' : 
+                   category === 'Rejas' ? 'Railing' : 
+                   category === 'Muebles' ? 'Furniture' :
+                   category === 'Otros' ? 'Other' : 'All');
   };
 
   if (error) {
@@ -42,7 +43,7 @@ const Products = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-              Our Complete Catalog
+              Nuestro Catálogo Completo
             </h1>
             
             {/* Filter Buttons */}
@@ -50,10 +51,11 @@ const Products = () => {
               {categories.map((category) => (
                 <Button
                   key={category}
-                  variant={activeFilter === (category === 'Grills' ? 'Grill' : 
-                                           category === 'Gates' ? 'Gate' : 
-                                           category === 'Railings' ? 'Railing' : 
-                                           category) ? 'default' : 'outline'}
+                  variant={activeFilter === (category === 'Parrillas' ? 'Grill' : 
+                                           category === 'Portones' ? 'Gate' : 
+                                           category === 'Rejas' ? 'Railing' : 
+                                           category === 'Muebles' ? 'Furniture' :
+                                           category === 'Otros' ? 'Other' : 'All') ? 'default' : 'outline'}
                   onClick={() => handleFilterClick(category)}
                   className="transition-colors"
                 >
@@ -66,7 +68,7 @@ const Products = () => {
           {/* Products Grid */}
           {loading ? (
             <div className="text-center py-20">
-              <p className="text-muted-foreground">Loading products...</p>
+              <p className="text-muted-foreground">Cargando productos...</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -78,7 +80,7 @@ const Products = () => {
           
           {!loading && products.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-muted-foreground">No products found in this category.</p>
+              <p className="text-muted-foreground">No se encontraron productos en esta categoría.</p>
             </div>
           )}
         </div>

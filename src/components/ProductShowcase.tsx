@@ -13,7 +13,7 @@ const ProductShowcase = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our Collection
+            Nuestra Colección
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
@@ -21,11 +21,11 @@ const ProductShowcase = () => {
         {/* Featured Grills Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Featured Grills
+            Parrillas Destacadas
           </h2>
           {grillsLoading ? (
             <div className="text-center py-8">
-              <p className="text-muted-foreground">Loading grills...</p>
+              <p className="text-muted-foreground">Cargando parrillas...</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -39,11 +39,11 @@ const ProductShowcase = () => {
         {/* Custom Gates & Railings Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Custom Gates & Railings
+            Portones y Rejas a Medida
           </h2>
           {gatesLoading ? (
             <div className="text-center py-8">
-              <p className="text-muted-foreground">Loading gates...</p>
+              <p className="text-muted-foreground">Cargando portones...</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -58,7 +58,7 @@ const ProductShowcase = () => {
         <div className="text-center">
           <Link to="/products">
             <Button size="lg" className="px-8 py-4 text-lg font-semibold">
-              View All Products
+              Ver Todos los Productos
             </Button>
           </Link>
         </div>
