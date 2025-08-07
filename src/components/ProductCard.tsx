@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <>
       <div 
-        className="group cursor-pointer bg-card rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative"
+        className="group cursor-pointer bg-card rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative w-full max-w-sm mx-auto md:max-w-none md:mx-0"
         onClick={() => setIsModalOpen(true)}
       >
         <div className="aspect-square overflow-hidden relative">
@@ -41,12 +41,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
             </Button>
           </div>
         </div>
-        <div className="p-4">
-          <h4 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">
+        <div className="p-3 md:p-4">
+          <h4 className="text-base md:text-lg font-semibold text-foreground mb-2 line-clamp-2 leading-tight">
             {product.name}
           </h4>
-          <p className="text-xl font-bold text-primary">
-            Consultar Precio
+          <p className="text-lg md:text-xl font-bold text-primary">
+            {product.price ? formatPrice(product.price) : 'Consultar Precio'}
           </p>
         </div>
       </div>

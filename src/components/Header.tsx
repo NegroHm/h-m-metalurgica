@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +69,11 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button className="text-foreground">
+            <button 
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="text-foreground p-2"
+              aria-label="Abrir menú"
+            >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -76,6 +81,64 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div className="fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center">
+            {/* Close button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-6 right-6 text-white p-2"
+              aria-label="Cerrar menú"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            {/* Navigation Links */}
+            <nav className="flex flex-col space-y-8 text-center">
+              <button 
+                onClick={() => {
+                  scrollToSection('home');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-white text-2xl font-medium hover:text-gray-300 transition-colors py-4 px-8"
+              >
+                Inicio
+              </button>
+              <button 
+                onClick={() => {
+                  window.location.href = '/products';
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-white text-2xl font-medium hover:text-gray-300 transition-colors py-4 px-8"
+              >
+                Productos
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('services');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-white text-2xl font-medium hover:text-gray-300 transition-colors py-4 px-8"
+              >
+                Servicios
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('about');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-white text-2xl font-medium hover:text-gray-300 transition-colors py-4 px-8"
+              >
+                Nosotros
+              </button>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

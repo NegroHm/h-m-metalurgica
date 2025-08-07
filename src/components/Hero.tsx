@@ -21,13 +21,13 @@ const Hero = () => {
       <div className="absolute inset-0 hero-overlay" />
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
           Arte en Acero.{" "}
           <span className="block">Hecho para Durar.</span>
         </h1>
         
-        <p className="text-xl md:text-2xl mb-8 font-light opacity-90 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 font-light opacity-90 max-w-2xl mx-auto">
           Parrillas Artesanales y Herrería a Medida por Héctor Medina
         </p>
         

@@ -108,6 +108,11 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
   }
   
   /* Typography Scale */
