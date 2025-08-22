@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-primary text-primary-foreground py-16">
+    <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -62,6 +62,12 @@ const Footer = () => {
                 className="block text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
               >
                 Nosotros
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+              >
+                Contacto
               </button>
             </div>
           </div>

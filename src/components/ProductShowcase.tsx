@@ -2,13 +2,14 @@ import ProductCard from "./ProductCard";
 import { useProducts } from "@/hooks/useProducts";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import Section from "./Section";
 
 const ProductShowcase = () => {
   const { products: grillProducts, loading: grillsLoading } = useProducts('Grill', true);
   const { products: gateProducts, loading: gatesLoading } = useProducts('Gate', true);
 
   return (
-    <section id="products" className="py-20 bg-background">
+    <Section id="products" className="py-20 bg-background" addNavbarPadding={true}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -63,7 +64,7 @@ const ProductShowcase = () => {
           </Link>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

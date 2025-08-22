@@ -4,8 +4,15 @@ import { supabase } from '@/integrations/supabase/client';
 export type Product = {
   id: number;
   name: string;
+  subtitle?: string;
   price: number;
+  original_price?: number;
   description: string;
+  specifications?: string;
+  dimensions?: string;
+  weight?: number;
+  material?: string;
+  stock_quantity?: number;
   image_url: string;
   category: string;
   featured: boolean;

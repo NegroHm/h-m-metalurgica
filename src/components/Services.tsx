@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Section from "./Section";
 
 const Services = () => {
   const handleQuoteRequest = () => {
@@ -17,7 +18,7 @@ Gracias.`;
   };
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <Section id="services" className="py-20 bg-background" addNavbarPadding={true}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -69,7 +70,7 @@ Gracias.`;
           </Button>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
